@@ -3,22 +3,22 @@
 
 int main()
 {
-	int myarray[20];
-	//myarray[0]=20;
-	//myarray[1]=19;
-	int myarraybytelengh = sizeof(myarray);
-	int intbytes=sizeof(int);
-	int myarraylengh=myarraybytelengh/intbytes;
-	printf("myarraybytelengh=%d\n",myarraybytelengh);
-	printf("intbytes=%d\n",intbytes);
-	printf("myarraylengh%d\n",myarraylengh);
+	int ar[20];
+	//ar[0]=20;
+	//ar[1]=19;
+	int lungar = sizeof(ar);
+	int byinter=sizeof(int);
+	int arlengh=lungar/byinter;
+	printf("lungar=%d\n",lungar);
+	printf("byinter=%d\n",byinter);
+	printf("arlengh%d\n",arlengh);
 	for(int i=0;i<20;++i)
 	{
-		myarray[i]=20-i;
+		ar[i]=20-i;
 		//printf("%d\n",i);
 	}
 	for(int i=0;i<20;++i){
-		printf("myarray[%d]=%d\n",i,myarray[i]);
+		printf("ar[%d]=%d\n",i,ar[i]);
 	}
 	return EXIT_SUCCESS;
 }
