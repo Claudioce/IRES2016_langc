@@ -3,27 +3,12 @@
 #include <string.h>
 
 typedef struct {
-	char ragsociale[18];
+	char ragsoc[18];
 	char piva[12];
-	
-}ditta;
+}azienda;
 
-void ditta_setragsociale(ditta* questa, char* ragsociale) {
-	int lunghezza = sizeof(questa->ragsociale)/sizeof(char);
-	strncpy(questa->ragsociale, ragsociale, lunghezza);
-	questa->ragsociale[lunghezza - 1] = '\0';
-}
+void azienda_setragsoc(azienda* questa, char* ragsoc);
 
-void ditta_setpiva(ditta* questa, char* piva) {
-	int lunghezza = sizeof(questa->piva)/sizeof(char);
-	//void* viva= piva;
-	//char* niva;
-	//niva=  (char*)viva;
-	strncpy(questa->piva, piva, lunghezza);
-	questa->piva[lunghezza - 1] = '\0';
-}
-void ditta_prendiBigliettoDaVisita(ditta* questa, char* biglietto) {
-	strcpy(biglietto, questa->ragsociale);
-	strcat(biglietto, " P.Iva : ");
-	strcat(biglietto, questa->piva);
-}
+void azienda_setpiva(azienda* questa, char* piva);
+
+void azienda_prenditimbro(azienda* questa, char* biglietto);
